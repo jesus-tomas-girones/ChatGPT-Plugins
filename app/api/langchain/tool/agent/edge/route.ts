@@ -62,7 +62,9 @@ async function handle(req: NextRequest) {
     );
     var edgeTools = await edgeTool.getCustomTools();
     var tools = [...edgeTools];
-    return await agentApi.getApiHandler(req, reqBody, tools);
+    var respuesta = await agentApi.getApiHandler(req, reqBody, tools);
+    console.log(respuesta);
+    return respuesta; 
   } catch (e) {
     return new Response(JSON.stringify({ error: (e as any).message }), {
       status: 500,
