@@ -35,7 +35,10 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest"></link>
         <script src="/serviceWorkerRegister.js" defer></script>
       </head>
-      <body>{children}</body>
+      <body>
+        <p>hola</p>
+        {children}
+      </body>
     </html>
   );
 }
